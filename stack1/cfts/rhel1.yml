@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: "Test CFT from codepipeline"
+Resources:
+  SingleRhel8Machine:
+    Type: AWS::EC2::Instance
+    Properties: 
+      DisableApiTermination: False
+      ImageId: "ami-02f147dfb8be58a10"
+      InstanceType: "t2.micro"
+      KeyName: "OSXKeyPair"
+      SecurityGroups: 
+        - allow_ssh
